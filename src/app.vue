@@ -12,7 +12,7 @@ onMounted(() => {
   nextTick(() => {
     /* Prevent the default context menu from appearing on right-click */
     window.addEventListener("contextmenu", (event) => {
-      event.preventDefault();
+      // event.preventDefault();
     });
   });
 });
