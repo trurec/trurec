@@ -18,6 +18,7 @@
     "@types/bootstrap": "^5.2.8",
     "autoprefixer": "^10.4.16",
     "nuxt": "^3.8.0",
+    "nuxt-bootstrap-icons": "^1.0.3",
     "postcss": "^8.4.31",
     "postcss-loader": "^7.3.3",
     "sass": "^1.69.4",

@@ -38,4 +38,5 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   css: ["@/assets/sass/app.scss"],
+  modules: ["nuxt-bootstrap-icons"],
 });
