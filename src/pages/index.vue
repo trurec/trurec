@@ -31,13 +31,15 @@
                         </ul>
                         <!-- Right navigation -->
                         <div class="navbar-nav ms-lg-4">
-                            <a class="nav-item nav-link" href="#">Sign in</a>
+                            <NuxtLink to="/auth/login" class="nav-item nav-link">
+                                Login
+                            </NuxtLink>
                         </div>
                         <!-- Action -->
                         <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-                            <a href="#" class="btn btn-sm btn-light w-full w-lg-auto">
+                            <NuxtLink to="/auth/register" class="btn btn-sm btn-light w-full w-lg-auto">
                                 Register
-                            </a>
+                            </NuxtLink>
                         </div>
                     </div>
                 </div>
