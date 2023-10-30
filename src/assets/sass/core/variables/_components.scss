@@ -535,8 +535,7 @@ $modal-vertical-width: 350px !default;
 $modal-vertical-lg: 450px !default;
 $modal-vertical-space-y: 0.5rem !default;
 $modal-vertical-space-x: 0 !default;
-$modal-vertical-border-radius: $modal-content-border-radius 0 0
-  $modal-content-border-radius !default;
+$modal-vertical-border-radius: $modal-content-border-radius 0 0 !default;
 
 // Navs
 
@@ -554,13 +553,13 @@ $nav-tabs-sm-font-size: 0.8125rem !default;
 $nav-tabs-sm-link-margin-x: 0.5rem !default;
 
 $nav-tabs-link-margin-x: 1.25rem !default;
-$nav-tabs-link-padding-y: $card-cap-padding-y !default;
+$nav-tabs-link-padding-y: 0.5rem !default;
 $nav-tabs-border-color: $border-color !default;
 $nav-tabs-border-radius: 0 !default;
 $nav-tabs-link-hover-border-color: transparent transparent transparent !default;
 $nav-tabs-link-active-color: $primary !default;
 $nav-tabs-link-active-bg: transparent !default;
-$nav-tabs-link-active-border-width: 1px !default;
+$nav-tabs-link-active-border-width: 2px !default;
 $nav-tabs-link-active-border-color: transparent transparent $primary !default;
 
 $nav-pills-border-radius: $border-radius !default;
