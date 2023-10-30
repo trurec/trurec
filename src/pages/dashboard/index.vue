@@ -43,8 +43,18 @@
 					<!-- Navigation -->
 					<ul class="navbar-nav">
 						<li class="nav-item">
-							<a class="nav-link" href="#">
+							<NuxtLink to="/dashboard" class="nav-link" exact exact-active-class="active">
 								<BootstrapIcon name="house" /> Dashboard
+							</NuxtLink>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<BootstrapIcon name="briefcase" /> Jobs
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">
+								<BootstrapIcon name="people" /> Candidates
 							</a>
 						</li>
 						<li class="nav-item">
@@ -54,102 +64,12 @@
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="#">
-								<BootstrapIcon name="chat" /> Messages
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								<BootstrapIcon name="bookmarks" /> Collections
-							</a>
-						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="#">
-								<BootstrapIcon name="people" /> Users
+								<BootstrapIcon name="tools" /> Setup
 							</a>
 						</li>
 					</ul>
 					<!-- Divider -->
 					<hr class="navbar-divider my-5 opacity-20">
-					<!-- Navigation -->
-					<ul class="navbar-nav mb-md-4">
-						<li>
-							<div class="nav-link text-xs font-semibold text-uppercase text-muted ls-wide" href="#">
-								Contacts
-								<span
-									class="badge bg-opacity-30 bg-primary text-primary rounded-pill d-inline-flex align-items-center ms-4">13</span>
-							</div>
-						</li>
-						<li>
-							<a href="#" class="nav-link d-flex align-items-center">
-								<div class="me-4">
-									<div class="position-relative d-inline-block text-white">
-										<img alt="Image Placeholder"
-											src="https://images.unsplash.com/photo-1548142813-c348350df52b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-											class="avatar rounded-circle">
-										<span
-											class="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-success rounded-circle"></span>
-									</div>
-								</div>
-								<div>
-									<span class="d-block text-sm font-semibold">
-										Marie Claire
-									</span>
-									<span class="d-block text-xs text-muted font-regular">
-										Paris, FR
-									</span>
-								</div>
-								<div class="ms-auto">
-									<i class="bi bi-chat"></i>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="nav-link d-flex align-items-center">
-								<div class="me-4">
-									<div class="position-relative d-inline-block text-white">
-										<span class="avatar bg-opacity-30 bg-warning text-warning rounded-circle">JW</span>
-										<span
-											class="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-success rounded-circle"></span>
-									</div>
-								</div>
-								<div>
-									<span class="d-block text-sm font-semibold">
-										Michael Jordan
-									</span>
-									<span class="d-block text-xs text-muted font-regular">
-										Bucharest, RO
-									</span>
-								</div>
-								<div class="ms-auto">
-									<i class="bi bi-chat"></i>
-								</div>
-							</a>
-						</li>
-						<li>
-							<a href="#" class="nav-link d-flex align-items-center">
-								<div class="me-4">
-									<div class="position-relative d-inline-block text-white">
-										<img alt="..."
-											src="https://images.unsplash.com/photo-1610899922902-c471ae684eff?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=256&h=256&q=80"
-											class="avatar rounded-circle">
-										<span
-											class="position-absolute bottom-2 end-2 transform translate-x-1/2 translate-y-1/2 border-2 border-solid border-current w-3 h-3 bg-danger rounded-circle"></span>
-									</div>
-								</div>
-								<div>
-									<span class="d-block text-sm font-semibold">
-										Heather Wright
-									</span>
-									<span class="d-block text-xs text-muted font-regular">
-										London, UK
-									</span>
-								</div>
-								<div class="ms-auto">
-									<i class="bi bi-chat"></i>
-								</div>
-							</a>
-						</li>
-					</ul>
 					<!-- Push content down -->
 					<div class="mt-auto"></div>
 					<!-- User (md) -->
@@ -177,7 +97,7 @@
 						<div class="row align-items-center">
 							<div class="col-sm-6 col-12 mb-4 mb-sm-0">
 								<!-- Title -->
-								<h1 class="h2 mb-0 ls-tight">Application</h1>
+								<h1 class="h2 mb-0 ls-tight">Dashboard</h1>
 							</div>
 							<!-- Actions -->
 							<div class="col-sm-6 col-12 text-sm-end">
@@ -200,13 +120,12 @@
 						<!-- Nav -->
 						<ul class="nav nav-tabs mt-4 overflow-x border-0">
 							<li class="nav-item ">
-								<a href="#" class="nav-link active">All files</a>
+								<NuxtLink to="/dashboard" class="nav-link" exact exact-active-class="active">
+									Overview
+								</NuxtLink>
 							</li>
 							<li class="nav-item">
-								<a href="#" class="nav-link font-regular">Shared</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link font-regular">File requests</a>
+								<a href="#" class="nav-link font-regular">Calender</a>
 							</li>
 						</ul>
 					</div>
