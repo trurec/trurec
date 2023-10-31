@@ -1,15 +1,12 @@
 <template>
-	<nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-3" id="topbar">
+	<nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-2" id="topbar">
 		<div class="container-fluid">
-			<div class="hstack gap-2">
-				<button type="button" class="btn btn-sm btn-square bg-tertiary bg-opacity-20 bg-opacity-100-hover text-tertiary text-white-hover">C</button>
-				<button type="button" class="btn btn-sm btn-square bg-primary bg-opacity-20 bg-opacity-100-hover text-primary text-white-hover">D</button>
-				<button type="button" class="btn btn-sm btn-square bg-warning bg-opacity-20 bg-opacity-100-hover text-warning text-white-hover">A</button>
-				<button type="button" class="btn btn-sm btn-square btn-neutral border-dashed shadow-none"><i class="bi bi-plus-lg"></i></button>
-			</div>
-			<form class="form-inline ms-auto me-4 d-none d-md-flex">
+			<form class="form-inline me-4 d-none d-md-flex">
 				<div class="input-group input-group-inline shadow-none">
-					<span class="input-group-text border-0 shadow-none ps-0 pe-3"><i class="bi bi-search"></i> </span><input type="text" class="form-control form-control-flush" placeholder="Search" aria-label="Search" />
+					<span class="input-group-text border-0 shadow-none ps-0 pe-3">
+						<i class="bi bi-search"></i> 
+					</span>
+					<input type="text" class="form-control form-control-flush" placeholder="Search for jobs, candidates" aria-label="Search" />
 				</div>
 			</form>
 			<div class="navbar-user d-none d-sm-block">

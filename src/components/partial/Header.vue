@@ -4,9 +4,9 @@
 			<div class="mb-npx">
 				<div class="row align-items-center">
 					<div class="col-sm-6 col-12 mb-4 mb-sm-0">
-						<h1 class="h2 mb-0 ls-tight">Dashboard</h1>
+						<h1 class="h2 mb-0 ls-tight">{{ route?.meta?.name }}</h1>
 					</div>
-
+					
 					<div class="col-sm-6 col-12 text-sm-end">
 						<div class="mx-n1">
 							<a href="#" class="btn d-inline-flex btn-sm btn-neutral mx-1">
@@ -24,18 +24,25 @@
 						</div>
 					</div>
 				</div>
-
+				
 				<ul class="nav nav-tabs mt-4 overflow-x border-0">
-					<li class="nav-item ">
-						<NuxtLink to="/app/dashboard" class="nav-link" exact exact-active-class="active">
-							Overview
-						</NuxtLink>
-					</li>
-					<li class="nav-item">
-						<a href="#" class="nav-link font-regular">Calender</a>
-					</li>
+					<template v-for="(child, index) in children" :key="index">
+						<li class="nav-item ">
+							<NuxtLink :to="child.link" class="nav-link" exact exact-active-class="active">
+								{{ child.title }}
+							</NuxtLink>
+						</li>
+					</template>
 				</ul>
 			</div>
 		</div>
 	</header>
 </template>
+
+<script setup lang="ts">
+const route = useRoute();
+
+const children: ComputedRef<Array> = computed(() => {
+	return route?.meta?.children ?? [];
+})
+</script>
