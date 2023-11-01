@@ -1,10 +1,10 @@
 <template>
-	<header class="bg-surface-primary border-bottom pt-6">
+	<header class="bg-surface-primary border-bottom pt-2">
 		<div class="container-fluid">
 			<div class="mb-npx">
 				<div class="d-flex align-items-center">
 					<div class="mb-2 mb-sm-0">
-						<h1 class="h2 mb-0 ls-tight">{{ route?.meta?.name }}</h1>
+						<h1 class="h2 mb-0 ls-tight">{{ route?.meta?.module }}</h1>
 					</div>
 				</div>
 
@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import { Children } from './types';
+import type { Children } from './types';
 
 const route = useRoute();
 

@@ -41,7 +41,7 @@ $grays: (
 
 
 // Base colors
-$blue:    #0099FF !default;
+$blue:    #5B72FF !default;
 $indigo:  #5C60F5 !default;
 $purple:  #8957FF !default;
 $pink:    #FF579A !default;
@@ -294,7 +294,7 @@ $colors: (
 // scss-docs-end colors-map
 
 // Theme colors
-$primary:       $indigo !default;
+$primary:       $blue !default;
 $secondary:     $gray-300 !default;
 $tertiary:      $pink !default;
 $success:       $green !default;

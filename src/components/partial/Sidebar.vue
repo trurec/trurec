@@ -56,7 +56,26 @@
 			</div>
 
 			<div class="collapse navbar-collapse" id="sidebarCollapse">
+				<div class="my-4 px-lg-6 position-relative">
+					<div class="dropdown w-full">
+						<button class="btn btn-primary d-flex w-full py-3 ps-3 pe-4 align-items-center shadow shadow-3-hover rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<span class="flex-fill text-start text-sm text-center text-uppercase font-semibold">Add New</span>
+							<BootstrapIcon name="arrow-down-circle" class="text-light text-opacity-70" />
+						</button>
+						<div class="dropdown-menu dropdown-menu-end w-full mt-3">
+							<NuxtLink to="/jobs" class="dropdown-item" active-class="active">
+								<BootstrapIcon name="briefcase" class="me-3" /> Job
+							</NuxtLink>
+							<NuxtLink to="/candidates" class="dropdown-item" active-class="active">
+								<BootstrapIcon name="people" class="me-3" /> Candidate
+							</NuxtLink>
+						</div>
+					</div>
+				</div>
+
 				<ul class="navbar-nav">
+					
+
 					<li class="nav-item">
 						<NuxtLink to="/dashboard" class="nav-link" active-class="active">
 							<BootstrapIcon name="house" /> Dashboard
@@ -73,14 +92,14 @@
 						</NuxtLink>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">
-							<BootstrapIcon name="bar-chart" /> Analitycs
-						</a>
+						<NuxtLink to="/analytics" class="nav-link" active-class="active">
+							<BootstrapIcon name="bar-chart" /> Analytics
+						</NuxtLink>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="#">
+						<NuxtLink to="/setup" class="nav-link" active-class="active">
 							<BootstrapIcon name="tools" /> Setup
-						</a>
+						</NuxtLink>
 					</li>
 				</ul>
 				<hr class="navbar-divider my-5 opacity-20">
@@ -123,7 +142,7 @@
 					</div>
 					<div class="d-flex gap-3 justify-content-center align-items-center mt-6">
 						<div>
-							<BootstrapIcon name="moon-stars" class="me-2 text-warning me-2" />
+							<BootstrapIcon name="moon-stars" class="text-warning me-2" />
 							<span class="text-heading text-sm font-bold">Dark mode</span>
 						</div>
 						<div class="ms-auto">

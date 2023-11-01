@@ -35,7 +35,7 @@
 			<div class="navbar-user d-none d-sm-block">
 				<div class="hstack gap-3 ms-4">
 					<div class="dropdown">
-						<a href="#" class="nav-link px-3 text-base text-muted text-opacity-70 text-opacity-100-hover"
+						<a href="#" class="nav-link px-3 text-base text-primary-hover text-opacity-70 text-opacity-100-hover"
 							id="dropdown-notifications" data-bs-toggle="dropdown" aria-expanded="false"><i
 								class="bi bi-bell-fill"></i></a>
 						<div class="dropdown-menu dropdown-menu-end px-2" aria-labelledby="dropdown-notifications">

@@ -38,5 +38,19 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   css: ["@/assets/sass/app.scss"],
-  modules: ["nuxt-bootstrap-icons"],
+  modules: ["@nuxtjs/google-fonts", "nuxt-bootstrap-icons"],
+  googleFonts: {
+    families: {
+      Poppins: [300, 400, 500, 600, 700],
+      Roboto: [300, 400, 500, 600]
+    },
+    display: "swap",
+  },
+  runtimeConfig: {
+    apiSecret: "123",
+    public: {
+      appName: "Trurec",
+      apiBase: "default_api_url"
+    },
+  },
 });

@@ -7,8 +7,11 @@
 <script setup lang="ts">
 definePageMeta({
   layout: 'application',
+
   redirect: "/jobs/posted",
-  name: "Jobs",
+
+  module: "Jobs",
+  
   children: [{
     title: "Posted Jobs",
     link: "/jobs/posted"
