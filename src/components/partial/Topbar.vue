@@ -35,9 +35,9 @@
 			<div class="navbar-user d-none d-sm-block">
 				<div class="hstack gap-3 ms-4">
 					<div class="dropdown">
-						<a href="#" class="nav-link px-3 text-base text-primary-hover text-opacity-70 text-opacity-100-hover"
-							id="dropdown-notifications" data-bs-toggle="dropdown" aria-expanded="false"><i
-								class="bi bi-bell-fill"></i></a>
+						<a href="#" class="px-2 text-base text-primary-hover text-opacity-70 text-opacity-100-hover" id="dropdown-notifications" data-bs-toggle="dropdown" aria-expanded="false">
+							<BootstrapIcon name="bell-fill" />
+						</a>
 						<div class="dropdown-menu dropdown-menu-end px-2" aria-labelledby="dropdown-notifications">
 							<div class="dropdown-item d-flex align-items-center">
 								<h6 class="dropdown-header p-0 m-0 font-semibold">Notifications</h6>
@@ -107,6 +107,23 @@
 								<a href="#" class="font-semibold text-muted text-primary-hover">View all</a>
 							</div>
 						</div>
+					</div>
+					<div class="dropdown">
+					    <a class="px-2 text-base text-primary-hover text-opacity-70 text-opacity-100-hover" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+					        <BootstrapIcon name="question-circle" />
+					    </a>
+					    <div class="dropdown-menu dropdown-menu-end">
+					        <div class="dropdown-header">
+					        	<span class="d-block text-heading font-bold">Help</span>
+					        </div>
+					        <div class="dropdown-divider"></div>
+					        <a class="dropdown-item" href="#">
+					        	<BootstrapIcon name="chat-dots" class="me-3" /> Help Center 
+					        </a>
+					        <a class="dropdown-item" href="#">
+					        	<BootstrapIcon name="telephone-inbound" class="me-3" /> Contact Us
+					        </a>
+					    </div>
 					</div>
 				</div>
 			</div>

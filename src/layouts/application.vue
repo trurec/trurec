@@ -14,3 +14,7 @@
 
     </div>
 </template>
+
+<script setup lang="ts">
+    const online = ref(navigator.onLine);
+</script>

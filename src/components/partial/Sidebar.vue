@@ -8,7 +8,7 @@
 				<span class="navbar-toggler-icon"></span>
 			</button>
 
-			<NuxtLink to="/" class="navbar-brand py-lg-2 mb-lg-5 px-lg-6 me-0">
+			<NuxtLink to="/" class="navbar-brand py-lg-2 px-lg-6 me-0">
 				<svg class="h-10" version="1.1" xmlns="http://www.w3.org/2000/svg"
 					xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%" viewBox="0 0 1080 369"
 					enable-background="new 0 0 1080 369" xml:space="preserve">
@@ -46,11 +46,24 @@
 						</div>
 					</a>
 					<div class="dropdown-menu dropdown-menu-end" aria-labelledby="sidebarAvatar">
-						<a href="#" class="dropdown-item">Profile</a>
-						<a href="#" class="dropdown-item">Settings</a>
-						<a href="#" class="dropdown-item">Billing</a>
-						<hr class="dropdown-divider">
-						<a href="#" class="dropdown-item">Logout</a>
+						<div class="dropdown-header">
+							<span class="d-block text-sm text-muted mb-1">Logged in as</span>
+							<span class="d-block text-heading font-semibold">Trurec</span>
+						</div>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">
+							<i class="bi bi-house me-3"></i> Home
+						</a>
+						<a class="dropdown-item" href="#">
+							<i class="bi bi-pencil me-3"></i> Profile
+						</a>
+						<a class="dropdown-item" href="#">
+							<i class="bi bi-gear me-3"></i> Settings
+						</a>
+						<div class="dropdown-divider"></div>
+						<a class="dropdown-item" href="#">
+							<BootstrapIcon name="box-arrow-left" class="me-3" /> Logout
+						</a>
 					</div>
 				</div>
 			</div>
@@ -66,7 +79,7 @@
 							<NuxtLink to="/jobs" class="dropdown-item" active-class="active">
 								<BootstrapIcon name="briefcase" class="me-3" /> Job
 							</NuxtLink>
-							<NuxtLink to="/candidates" class="dropdown-item" active-class="active">
+							<NuxtLink to="/candidates/applicants/create" class="dropdown-item" active-class="active">
 								<BootstrapIcon name="people" class="me-3" /> Candidate
 							</NuxtLink>
 						</div>

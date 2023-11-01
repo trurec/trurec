@@ -1,5 +1,5 @@
 <template>
-	<header class="bg-surface-primary border-bottom pt-2">
+	<header class="bg-surface-primary pt-2">
 		<div class="container-fluid">
 			<div class="mb-npx">
 				<div class="d-flex align-items-center">

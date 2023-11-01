@@ -1,3 +1,9 @@
 <template>
-	<h1>hai</h1>
+	<main class="bg-surface-secondary">
+		<div class="container-fluid">
+			<div class="card">
+				<div class="card-body">Posted</div>
+			</div>
+		</div>
+	</main>
 </template>
