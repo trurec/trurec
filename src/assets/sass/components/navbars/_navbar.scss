@@ -90,16 +90,16 @@
     }
   }
 
-  .dropdown {
-    &:hover {
-      .dropdown-menu {
-        right: 0;
-        left: auto;
-        display: block;
-        margin-top: var(--x-dropdown-spacer);
-      }
-    }
-  }
+  // .dropdown {
+  //   &:hover {
+  //     .dropdown-menu {
+  //       right: 0;
+  //       left: auto;
+  //       display: block;
+  //       margin-top: var(--x-dropdown-spacer);
+  //     }
+  //   }
+  // }
 }
 
 // Collapse

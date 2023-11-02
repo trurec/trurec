@@ -16,6 +16,7 @@
   "devDependencies": {
     "@nuxt/devtools": "latest",
     "@nuxtjs/google-fonts": "^3.0.2",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
     "@types/bootstrap": "^5.2.8",
     "autoprefixer": "^10.4.16",
     "nuxt": "^3.8.0",

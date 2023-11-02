@@ -42,6 +42,16 @@
 			</div>
 			<div class="navbar-top d-none d-sm-block">
 				<div class="hstack gap-3 ms-4">
+					<!-- <div class="dropdown">
+						<a href="#" class="px-2 text-base text-primary-hover text-opacity-70 text-opacity-100-hover" role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+							EN
+						</a>
+						<div class="dropdown-menu dropdown-menu-end">
+							<a v-for="(value, key) in 3" :key="key" class="dropdown-item" href="#">
+								{{ value }}
+							</a>
+						</div>
+					</div> -->
 					<div class="dropdown">
 						<a href="#" class="px-2 text-base text-primary-hover text-opacity-70 text-opacity-100-hover"
 							role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
