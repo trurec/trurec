@@ -15,10 +15,18 @@
                         <input type="email" class="form-control form-control-muted" id="email">
                     </div>
                     <div class="mb-5">
-                        <label class="form-label" for="password">Password</label>
-                        <input type="password" class="form-control form-control-muted" id="password"
-                            autocomplete="current-password">
+                        <div class="d-flex align-items-center justify-content-between">
+                            <div><label class="form-label" for="password">Password</label></div>
+                            <div class="mb-2">
+                                <NuxtLink to="/auth/forgot-password"
+                                    class="text-sm text-muted text-primary-hover text-underline">
+                                    Forgot password?
+                                </NuxtLink>
+                            </div>
+                        </div>
+                        <input type="password" class="form-control" id="password" autocomplete="current-password" />
                     </div>
+
                     <div class="mb-5">
                         <div class="form-check">
                             <input class="form-check-input" type="checkbox" name="check_example" id="check_example">
@@ -28,7 +36,7 @@
                         </div>
                     </div>
                     <div>
-                        <a href="#" class="btn btn-primary w-full">
+                        <a href="#" class="btn btn-primary w-full" v-on:click.prevent="dashboard">
                             Sign in
                         </a>
                     </div>
