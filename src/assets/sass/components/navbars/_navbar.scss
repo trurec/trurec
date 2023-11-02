@@ -35,21 +35,6 @@
   justify-content: space-around;
 }
 
-.navbar-top {
-  .hstack {
-    .dropdown {
-      &:hover {
-        .dropdown-menu {
-          right: 0;
-          left: auto;
-          display: block;
-          margin-top: var(--x-dropdown-spacer);
-        }
-      }
-    }
-  }
-}
-
 .navbar-img-brand {
   font-size: initial;
 }
@@ -102,6 +87,17 @@
 
     .nav-link {
       padding: 0.5rem 0.5rem;
+    }
+  }
+
+  .dropdown {
+    &:hover {
+      .dropdown-menu {
+        right: 0;
+        left: auto;
+        display: block;
+        margin-top: var(--x-dropdown-spacer);
+      }
     }
   }
 }
