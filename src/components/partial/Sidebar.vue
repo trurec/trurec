@@ -90,27 +90,27 @@
 					
 
 					<li class="nav-item">
-						<NuxtLink to="/dashboard" class="nav-link" active-class="active">
+						<NuxtLink to="/dashboard" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
 							<BootstrapIcon name="house" /> Dashboard
 						</NuxtLink>
 					</li>
 					<li class="nav-item">
-						<NuxtLink to="/jobs" class="nav-link" active-class="active">
+						<NuxtLink to="/jobs" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
 							<BootstrapIcon name="briefcase" /> Jobs
 						</NuxtLink>
 					</li>
 					<li class="nav-item">
-						<NuxtLink to="/candidates" class="nav-link" active-class="active">
+						<NuxtLink to="/candidates" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
 							<BootstrapIcon name="people" /> Candidates
 						</NuxtLink>
 					</li>
 					<li class="nav-item">
-						<NuxtLink to="/analytics" class="nav-link" active-class="active">
+						<NuxtLink to="/analytics" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
 							<BootstrapIcon name="bar-chart" /> Analytics
 						</NuxtLink>
 					</li>
 					<li class="nav-item">
-						<NuxtLink to="/setup" class="nav-link" active-class="active">
+						<NuxtLink to="/setup" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
 							<BootstrapIcon name="tools" /> Setup
 						</NuxtLink>
 					</li>

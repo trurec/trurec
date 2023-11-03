@@ -37,7 +37,7 @@ export default defineNuxtConfig({
     layoutTransition: { name: "layout", mode: "out-in" },
     pageTransition: { name: "page", mode: "out-in" },
   },
-  css: ["@/assets/sass/app.scss"],
+  css: ["@/assets/sass/index.scss"],
   modules: ["@nuxtjs/google-fonts", "nuxt-bootstrap-icons"],
   googleFonts: {
     families: {
