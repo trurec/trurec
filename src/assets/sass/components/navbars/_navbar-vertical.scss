@@ -109,10 +109,6 @@
                         background-color: $navbar-light-hover-bg;
                     }
                     &.active {
-                        i, svg {
-                            color: $primary;
-                        }
-                        color: $primary;
                         background-color: $navbar-light-active-bg;
                     }
                 }

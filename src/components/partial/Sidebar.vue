@@ -86,35 +86,25 @@
 					</div>
 				</div>
 
-				<ul class="navbar-nav">
-					
-
-					<li class="nav-item">
-						<NuxtLink to="/dashboard" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
-							<BootstrapIcon name="house" /> Dashboard
-						</NuxtLink>
-					</li>
-					<li class="nav-item">
-						<NuxtLink to="/jobs" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
-							<BootstrapIcon name="briefcase" /> Jobs
-						</NuxtLink>
-					</li>
-					<li class="nav-item">
-						<NuxtLink to="/candidates" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
-							<BootstrapIcon name="people" /> Candidates
-						</NuxtLink>
-					</li>
-					<li class="nav-item">
-						<NuxtLink to="/analytics" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
-							<BootstrapIcon name="bar-chart" /> Analytics
-						</NuxtLink>
-					</li>
-					<li class="nav-item">
-						<NuxtLink to="/setup" class="nav-link shadow-1-hover rounded mx-6" active-class="active">
-							<BootstrapIcon name="tools" /> Setup
-						</NuxtLink>
-					</li>
+				<ul class="navbar-nav accordion" id="sidebarMainMenu">
+					<template v-for="(menu, i) in MainMenuConfig" :key="i">
+						<li class="nav-item">
+						   <NuxtLink :to="menu?.route" class="nav-link collapsed" active-class="active" :id="`menu-${i}`" data-bs-toggle="collapse" :data-bs-target="`#main-menu-${i}`" :aria-expanded="activeSubmenu(menu?.route)" :aria-controls="`main-menu-${i}`">
+								<BootstrapIcon :name="menu?.icon" /> {{ menu?.title }}
+							</NuxtLink>
+						    <div class="collapse" :class="{ 'show': activeSubmenu(menu?.route) }" :id="`main-menu-${i}`" :aria-labelledby="`menu-${i}`" data-bs-parent="#sidebarMainMenu">
+						        <ul class="nav nav-sm flex-column">
+						        	<template v-for="(submenu, j) in menu?.submenus" :key="j">
+						        		<li class="nav-item">
+						        			<NuxtLink :to="submenu?.route" class="nav-link" active-class="text-primary font-bold">{{ submenu?.title }}</NuxtLink>
+						        		</li>
+						            </template>
+						        </ul>
+						    </div>
+						</li>
+					</template>
 				</ul>
+
 				<hr class="navbar-divider my-5 opacity-20">
 
 				<div class="mt-auto"></div>
@@ -170,3 +160,17 @@
 		</div>
 	</nav>
 </template>
+
+<script setup lang="ts">
+    import MainMenuConfig from "~/config/MainMenuConfig";
+
+    const routeObject = reactive({ route: useRoute() });
+
+    const activeSubmenu = (input: string) => {
+	    // Convert the input to an array if it's not already
+	    const paths = Array.isArray(input) ? input : [input];
+
+	    // Return true if any of the specified paths is a prefix of the current route's path
+	    return paths.some((path) => routeObject?.route?.path.startsWith(path));
+	};
+</script>
