@@ -30,29 +30,6 @@
 					<div class="card-body">
 						<div class="row">
 							<div class="col">
-								<span class="h6 font-semibold text-muted text-sm d-block mb-2">Received Resumes</span>
-								<span class="h3 font-bold mb-0">5</span>
-							</div>
-							<div class="col-auto">
-								<div class="icon icon-shape bg-info text-white text-lg rounded-circle">
-									<BootstrapIcon name="file-person" />
-								</div>
-							</div>
-						</div>
-						<div class="mt-2 mb-0 text-sm">
-							<span class="badge badge-pill bg-opacity-30 bg-success text-success me-2">
-								<BootstrapIcon name="arrow-up" class="me-1" />30%
-							</span>
-							<span class="text-nowrap text-xs text-muted">Since last month</span>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="col-xl-4 col-sm-6 col-12">
-				<div class="card">
-					<div class="card-body">
-						<div class="row">
-							<div class="col">
 								<span class="h6 font-semibold text-muted text-sm d-block mb-2">Total
 									Candidates</span>
 								<span class="h3 font-bold mb-0">10</span>
@@ -66,6 +43,29 @@
 						<div class="mt-2 mb-0 text-sm">
 							<span class="badge badge-pill bg-opacity-30 bg-danger text-danger me-2">
 								<BootstrapIcon name="arrow-down" class="me-1" />-5%
+							</span>
+							<span class="text-nowrap text-xs text-muted">Since last month</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col-xl-4 col-sm-6 col-12">
+				<div class="card">
+					<div class="card-body">
+						<div class="row">
+							<div class="col">
+								<span class="h6 font-semibold text-muted text-sm d-block mb-2">Resumes Received</span>
+								<span class="h3 font-bold mb-0">5</span>
+							</div>
+							<div class="col-auto">
+								<div class="icon icon-shape bg-info text-white text-lg rounded-circle">
+									<BootstrapIcon name="file-person" />
+								</div>
+							</div>
+						</div>
+						<div class="mt-2 mb-0 text-sm">
+							<span class="badge badge-pill bg-opacity-30 bg-success text-success me-2">
+								<BootstrapIcon name="arrow-up" class="me-1" />30%
 							</span>
 							<span class="text-nowrap text-xs text-muted">Since last month</span>
 						</div>
