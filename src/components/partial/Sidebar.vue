@@ -71,8 +71,11 @@
 			<div class="collapse navbar-collapse" id="sidebarCollapse">
 				<div class="my-4 px-lg-6 position-relative">
 					<div class="dropdown w-full">
-						<button class="btn btn-primary d-flex w-full py-3 ps-3 pe-4 align-items-center shadow shadow-3-hover rounded-3" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<span class="flex-fill text-start text-sm text-center text-uppercase font-semibold">Add New</span>
+						<button
+							class="btn btn-primary d-flex w-full py-3 ps-3 pe-4 align-items-center shadow shadow-3-hover rounded-3"
+							type="button" data-bs-toggle="dropdown" aria-expanded="false">
+							<span class="flex-fill text-start text-sm text-center text-uppercase font-semibold">Add
+								New</span>
 							<BootstrapIcon name="arrow-down-circle" class="text-light text-opacity-70" />
 						</button>
 						<div class="dropdown-menu dropdown-menu-end w-full mt-3">
@@ -89,18 +92,22 @@
 				<ul class="navbar-nav accordion" id="sidebarMainMenu">
 					<template v-for="(menu, i) in MainMenuConfig" :key="i">
 						<li class="nav-item">
-						   <NuxtLink :to="menu?.route" class="nav-link collapsed" active-class="active" :id="`menu-${i}`" data-bs-toggle="collapse" :data-bs-target="`#main-menu-${i}`" :aria-expanded="activeSubmenu(menu?.route)" :aria-controls="`main-menu-${i}`">
+							<NuxtLink :to="menu?.route" class="nav-link collapsed" active-class="active" :id="`menu-${i}`"
+								data-bs-toggle="collapse" :data-bs-target="`#main-menu-${i}`"
+								:aria-expanded="activeSubmenu(menu?.route)" :aria-controls="`main-menu-${i}`">
 								<BootstrapIcon :name="menu?.icon" /> {{ menu?.title }}
 							</NuxtLink>
-						    <div class="collapse" :class="{ 'show': activeSubmenu(menu?.route) }" :id="`main-menu-${i}`" :aria-labelledby="`menu-${i}`" data-bs-parent="#sidebarMainMenu">
-						        <ul class="nav nav-sm flex-column">
-						        	<template v-for="(submenu, j) in menu?.submenus" :key="j">
-						        		<li class="nav-item">
-						        			<NuxtLink :to="submenu?.route" class="nav-link" active-class="text-primary font-bold">{{ submenu?.title }}</NuxtLink>
-						        		</li>
-						            </template>
-						        </ul>
-						    </div>
+							<div class="collapse" :class="{ 'show': activeSubmenu(menu?.route) }" :id="`main-menu-${i}`"
+								:aria-labelledby="`menu-${i}`" data-bs-parent="#sidebarMainMenu">
+								<ul class="nav nav-sm flex-column">
+									<template v-for="(submenu, j) in menu?.submenus" :key="j">
+										<li class="nav-item">
+											<NuxtLink :to="submenu?.route" class="nav-link"
+												active-class="text-primary font-bold">{{ submenu?.title }}</NuxtLink>
+										</li>
+									</template>
+								</ul>
+							</div>
 						</li>
 					</template>
 				</ul>
@@ -162,15 +169,15 @@
 </template>
 
 <script setup lang="ts">
-    import MainMenuConfig from "~/config/MainMenuConfig";
+import MainMenuConfig from "~/config/MainMenuConfig";
 
-    const routeObject = reactive({ route: useRoute() });
+const routeObject = reactive({ route: useRoute() });
 
-    const activeSubmenu = (input: string) => {
-	    // Convert the input to an array if it's not already
-	    const paths = Array.isArray(input) ? input : [input];
+const activeSubmenu = (input: string) => {
+	// Convert the input to an array if it's not already
+	const paths = Array.isArray(input) ? input : [input];
 
-	    // Return true if any of the specified paths is a prefix of the current route's path
-	    return paths.some((path) => routeObject?.route?.path.startsWith(path));
-	};
+	// Return true if any of the specified paths is a prefix of the current route's path
+	return paths.some((path) => routeObject?.route?.path.startsWith(path));
+};
 </script>
