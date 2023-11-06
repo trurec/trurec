@@ -159,7 +159,7 @@
                 </form>
 
                 <div class="my-6">
-                    <small>Already a member?</small>
+                    <small>Already have an account?</small>
                     <NuxtLink to="/auth/login" class="text-warning small font-bold">
                         Login
                     </NuxtLink>
