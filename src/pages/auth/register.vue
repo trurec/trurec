@@ -46,7 +46,7 @@
                         Choose Account Type
                         <a href="#" class="text-sm text-muted text-primary-hover font-semibold me-2 d-none d-md-block ms-1"
                             data-bs-container="body" data-bs-toggle="popover" data-bs-placement="top"
-                            data-bs-content="Billing is issued based on your selected account type">
+                            data-bs-content="Choose your account type to get started. Are you an agency looking to hire or a candidate seeking opportunities?">
                             <BootstrapIcon name="exclamation-circle-fill" />
                         </a>
                     </h4>
