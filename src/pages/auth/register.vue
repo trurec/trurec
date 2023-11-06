@@ -64,7 +64,7 @@
                                 id="account-type-agency">
                             <label class="btn btn-outline-light border border-dashed p-6 d-flex align-items-center mb-10"
                                 for="account-type-agency">
-                                <BootstrapIcon name="building-fill-add" class="text-muted me-5" />
+                                <BootstrapIcon name="building-fill" class="text-muted me-5" />
                                 <span class="text-gray-900 d-block">
                                     Agency
                                 </span>
@@ -160,7 +160,7 @@
 
                 <div class="my-6">
                     <small>Already have an account?</small>
-                    <NuxtLink to="/auth/login" class="text-warning small font-bold">
+                    <NuxtLink to="/auth/login" class="text-primary small font-bold">
                         Login
                     </NuxtLink>
                 </div>

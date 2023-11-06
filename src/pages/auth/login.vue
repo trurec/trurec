@@ -142,7 +142,7 @@
                 </div>
                 <div class="my-6">
                     <small>Don't have an account?</small>
-                    <NuxtLink to="/auth/register" class="text-warning text-sm font-semibold">
+                    <NuxtLink to="/auth/register" class="text-primary text-sm font-semibold">
                         Register
                     </NuxtLink>
                 </div>

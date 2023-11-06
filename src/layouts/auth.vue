@@ -4,8 +4,8 @@
             <div
                 class="col-lg-5 col-xl-4 p-12 p-xl-7 position-fixed start-0 top-0 h-screen overflow-y-hidden d-none d-lg-flex flex-column">
                 <div class="d-lg-flex flex-column w-full h-full p-16 bg-surface-secondary rounded-5">
-                    <!-- Logo -->
-                    <a class="d-block" href="/">
+                    
+                    <NuxtLink to="/" class="d-block">
                         <div class="w-md-auto  text-dark">
                             <svg class="w-auto h-16" version="1.1" xmlns="http://www.w3.org/2000/svg"
                                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="100%"
@@ -31,9 +31,8 @@
                                     d="M189.371185,291.186737 C189.064133,246.888519 189.050400,202.230316 189.073212,157.062363 C189.412079,158.146744 189.976639,159.740585 189.978500,161.335068 C190.027832,203.349014 190.021805,245.363037 190.005203,287.377045 C190.004745,288.526978 189.783051,289.676849 189.371185,291.186737" />
                             </svg>
                         </div>
-                    </a>
+                    </NuxtLink>
 
-                    <!-- Title -->
                     <div class="mt-10 mt-xl-24">
                         <h1 class="lh-tight ls-tighter font-bolder display-5">
                             Your Trurec, Your Way.
