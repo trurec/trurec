@@ -65,7 +65,7 @@
                             <label class="btn btn-outline-light border border-dashed p-6 d-flex align-items-center mb-10"
                                 for="account-type-agency">
                                 <BootstrapIcon name="building-fill-add" class="text-muted me-5" />
-                                <span class="text-gray-900 d-block mb-2">
+                                <span class="text-gray-900 d-block">
                                     Agency
                                 </span>
                             </label>
@@ -77,7 +77,7 @@
                             <label class="btn btn-outline-light border border-dashed p-6 d-flex align-items-center mb-10"
                                 for="account-type-candidate">
                                 <BootstrapIcon name="person-circle" class="text-muted me-5" />
-                                <span class="text-gray-900 d-block mb-2">
+                                <span class="text-gray-900 d-block">
                                     Candidate
                                 </span>
                             </label>
