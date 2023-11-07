@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: process.env.APP_DEBUG || false },
   ssr: false,
   spaLoadingTemplate: "spa-loading-template.html",
   srcDir: "src/",
@@ -11,7 +11,7 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: "en",
       },
-      title: "Trurec",
+      title: process.env.APP_NAME || "Trurec",
       meta: [
         { charset: "utf-8" },
         {
@@ -41,7 +41,6 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/google-fonts",
     "nuxt-bootstrap-icons",
-    // "@vee-validate/nuxt",
   ],
   googleFonts: {
     families: {
@@ -50,20 +49,11 @@ export default defineNuxtConfig({
     },
     display: "swap",
   },
-  // veeValidate: {
-  //   autoImports: true,
-  //   componentNames: {
-  //     Form: "VeeForm",
-  //     Field: "VeeField",
-  //     FieldArray: "VeeFieldArray",
-  //     ErrorMessage: "VeeErrorMessage",
-  //   },
-  // },
   runtimeConfig: {
     apiSecret: "123",
     public: {
-      appName: "Trurec",
-      apiBase: "default_api_url",
+      appName: process.env.APP_NAME,
+      apiBase: process.env.API_URL
     },
   },
 });
