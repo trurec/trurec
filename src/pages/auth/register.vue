@@ -85,6 +85,13 @@
                     </div>
                 </div>
 
+                <div class="d-flex align-items-center justify-content-end">
+                    <button type="button" class="btn btn-primary">
+                        Continue
+                        <BootstrapIcon name="arrow-right" class="ms-5" />
+                    </button>
+                </div>
+
                 <form method="POST" action="https://webpixels.io/register">
                     <!-- <div class="row g-5">
                         <div class="col-xl-6">
@@ -133,7 +140,7 @@
                         </div>
                     </div> -->
 
-                    <div class="my-6">
+                    <!-- <div class="my-6">
                         <div class="form-check mb-5">
                             <input class="form-check-input" type="checkbox" name="terms" id="checkTerms">
                             <label class="form-check-label pl-2" for="checkTerms">
@@ -156,14 +163,14 @@
                             Register
                         </button>
                     </div>
-                </form>
 
-                <div class="my-6">
-                    <small>Already have an account?</small>
-                    <NuxtLink to="/auth/login" class="text-primary small font-bold">
-                        Login
-                    </NuxtLink>
-                </div>
+                    <div class="my-6">
+                        <small>Already have an account?</small>
+                        <NuxtLink to="/auth/login" class="text-primary small font-bold">
+                            Login
+                        </NuxtLink>
+                    </div> -->
+                </form>
             </div>
         </div>
     </div>
@@ -180,10 +187,7 @@ input[type="radio"]:checked+label {
     background-color: rgba(var(--x-surface-secondary-rgb), 1);
     border: var(--x-border-width) var(--x-border-style) var(--x-primary) !important;
 
-    i {
-        color: rgba(var(--x-primary-rgb), var(--x-text-opacity)) !important;
-    }
-
+    i,
     span {
         color: rgba(var(--x-primary-rgb), var(--x-text-opacity)) !important;
     }

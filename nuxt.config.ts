@@ -21,7 +21,7 @@ export default defineNuxtConfig({
         },
         { name: "keywords", content: "Trurec, Recruitment, Automation, SaaS" },
         { name: "viewport", content: "width=device-width, initial-scale=1" },
-        { property: "og:locale", content: "en_US" },
+        { property: "og:locale", content: "en_GB" },
         { property: "og:type", content: "article" },
         {
           property: "og:title",
@@ -38,19 +38,32 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   css: ["@/assets/sass/index.scss"],
-  modules: ["@nuxtjs/google-fonts", "nuxt-bootstrap-icons"],
+  modules: [
+    "@nuxtjs/google-fonts",
+    "nuxt-bootstrap-icons",
+    // "@vee-validate/nuxt",
+  ],
   googleFonts: {
     families: {
       Poppins: [300, 400, 500, 600, 700],
-      Roboto: [300, 400, 500, 600]
+      Roboto: [300, 400, 500, 600],
     },
     display: "swap",
   },
+  // veeValidate: {
+  //   autoImports: true,
+  //   componentNames: {
+  //     Form: "VeeForm",
+  //     Field: "VeeField",
+  //     FieldArray: "VeeFieldArray",
+  //     ErrorMessage: "VeeErrorMessage",
+  //   },
+  // },
   runtimeConfig: {
     apiSecret: "123",
     public: {
       appName: "Trurec",
-      apiBase: "default_api_url"
+      apiBase: "default_api_url",
     },
   },
 });
