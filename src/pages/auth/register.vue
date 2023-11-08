@@ -162,14 +162,14 @@
                         <button type="submit" class="btn btn-lg btn-primary">
                             Register
                         </button>
-                    </div>
+                    </div> -->
 
                     <div class="my-6">
                         <small>Already have an account?</small>
                         <NuxtLink to="/auth/login" class="text-primary small font-bold">
                             Login
                         </NuxtLink>
-                    </div> -->
+                    </div>
                 </form>
             </div>
         </div>
