@@ -19,7 +19,7 @@
 
                 <span class="clearfix"></span>
 
-                <transition name="fade" mode="out-in">
+                <transition name="page" mode="out-in">
                     <component :is="currentComponent" @navigateComponent="navigateComponent" />
                 </transition>
 
@@ -35,12 +35,12 @@
 </template>
 
 <script setup lang="ts">
-import account from './register/account.vue';
-import agency from './register/agency.vue';
-import candidate from './register/candidate.vue';
+import account from "./register/account.vue";
+import agency from "./register/agency.vue";
+import candidate from "./register/candidate.vue";
 
 definePageMeta({
-    layout: 'auth',
+    layout: "auth",
 });
 
 const dynamicComponents = {
@@ -51,7 +51,7 @@ const dynamicComponents = {
 
 const currentComponent = shallowRef<Object>(dynamicComponents.account);
 
-const navigateComponent = (component: String) => {
+const navigateComponent = (component: String = "account") => {
     if (dynamicComponents[component]) {
         currentComponent.value = dynamicComponents[component];
     }

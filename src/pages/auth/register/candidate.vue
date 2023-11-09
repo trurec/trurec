@@ -68,10 +68,10 @@
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(['navigateComponent'])
+const emit = defineEmits(["navigateComponent"])
 
 const navigateComponent = () => {
-  emit('navigateComponent', 'account')
+  emit("navigateComponent")
 };
 </script>
 
