@@ -6,6 +6,11 @@ export default defineNuxtConfig({
   typescript: {
     strict: true,
   },
+  vite: {
+    define: {
+      "process.env.DEBUG": false,
+    },
+  },
   app: {
     head: {
       htmlAttrs: {
@@ -48,6 +53,26 @@ export default defineNuxtConfig({
       Roboto: [300, 400, 500, 600],
     },
     display: "swap",
+  },
+  build: {
+    extend(config, { isClient }) {
+      if (isClient) {
+        const cssLoader = config.module.rules.find((rule) => {
+          return rule.test.toString() === '/\\.css$/i'
+        })
+        cssLoader.oneOf = cssLoader.oneOf.map((loader) => {
+          loader.use = loader.use.map((item) => {
+            if (item.options.modules) {
+              if (process.env.NODE_ENV === 'production') {
+                item.options.modules.localIdentName = '[hash:base64:5]'
+              }
+            }
+            return item
+          })
+          return loader
+        })
+      }
+    },
   },
   runtimeConfig: {
     apiSecret: "123",
