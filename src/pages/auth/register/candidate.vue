@@ -41,10 +41,9 @@
       <div class="form-check mb-5">
         <input class="form-check-input" type="checkbox" name="terms" id="checkTerms">
         <label class="form-check-label pl-2" for="checkTerms">
-          By creating an account means you agree to the <a href="https://webpixels.io/terms"
-          target="_blank" class="font-bold text-heading">Terms and Conditions</a>, and our
-          <a href="https://webpixels.io/privacy" target="_blank"
-          class="font-bold text-heading">Privacy Policy</a>
+          By creating an account means you agree to the <a href="https://webpixels.io/terms" target="_blank"
+            class="font-bold text-heading">Terms and Conditions</a>, and our
+          <a href="https://webpixels.io/privacy" target="_blank" class="font-bold text-heading">Privacy Policy</a>
         </label>
       </div>
       <div class="form-check">

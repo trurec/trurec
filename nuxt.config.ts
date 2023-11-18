@@ -43,10 +43,7 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   css: ["@/assets/sass/index.scss"],
-  modules: [
-    "@nuxtjs/google-fonts",
-    "nuxt-bootstrap-icons",
-  ],
+  modules: ["@nuxtjs/google-fonts", "nuxt-bootstrap-icons"],
   googleFonts: {
     families: {
       Poppins: [300, 400, 500, 600, 700],
@@ -58,19 +55,19 @@ export default defineNuxtConfig({
     extend(config, { isClient }) {
       if (isClient) {
         const cssLoader = config.module.rules.find((rule) => {
-          return rule.test.toString() === '/\\.css$/i'
-        })
+          return rule.test.toString() === "/\\.css$/i";
+        });
         cssLoader.oneOf = cssLoader.oneOf.map((loader) => {
           loader.use = loader.use.map((item) => {
             if (item.options.modules) {
-              if (process.env.NODE_ENV === 'production') {
-                item.options.modules.localIdentName = '[hash:base64:5]'
+              if (process.env.NODE_ENV === "production") {
+                item.options.modules.localIdentName = "[hash:base64:5]";
               }
             }
-            return item
-          })
-          return loader
-        })
+            return item;
+          });
+          return loader;
+        });
       }
     },
   },
@@ -78,7 +75,7 @@ export default defineNuxtConfig({
     apiSecret: "123",
     public: {
       appName: process.env.APP_NAME,
-      apiBase: process.env.API_URL
+      apiBase: process.env.API_URL,
     },
   },
 });

@@ -35,25 +35,37 @@
 </template>
 
 <script setup lang="ts">
-import account from "./register/account.vue";
-import agency from "./register/agency.vue";
-import candidate from "./register/candidate.vue";
+// Import the DynamicComponents type from "~/types/auth"
+import type { DynamicComponents } from "~/types/auth";
 
-definePageMeta({
-    layout: "auth",
-});
+// Import Vue components for dynamic use
+import Account from "./register/account.vue";
+import Agency from "./register/agency.vue";
+import Candidate from "./register/candidate.vue";
 
-const dynamicComponents = {
-    account,
-    agency,
-    candidate
-}
+// Define an object to store dynamic components
+const dynamicComponents: DynamicComponents = {
+    account: Account,
+    agency: Agency,
+    candidate: Candidate
+};
 
-const currentComponent = shallowRef<Object>(dynamicComponents.account);
+// Use shallowRef to create a reactive reference to the current component
+const currentComponent = shallowRef<Object>(dynamicComponents.account as Object);
 
-const navigateComponent = (component: String = "account") => {
-    if (dynamicComponents[component]) {
-        currentComponent.value = dynamicComponents[component];
+// Function to navigate to a different component
+const navigateComponent = (component: string = "account") => {
+    // Retrieve the selected component based on the provided component name
+    const selectedComponent = dynamicComponents[component];
+
+    // If the selected component exists, update the currentComponent value
+    if (selectedComponent) {
+        currentComponent.value = selectedComponent;
     }
 };
+
+// Define the page meta information
+definePageMeta({
+    layout: "auth", // Set the layout for the authentication page
+});
 </script>
