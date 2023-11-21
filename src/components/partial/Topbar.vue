@@ -1,9 +1,11 @@
 <template>
 	<nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-2" id="topbar">
 		<div class="container-fluid">
-			<!-- <button type="button" class="btn btn-primary btn-sm">
-				<BootstrapIcon name="arrow-left-circle-fill" />
-			</button> -->
+
+			<button id="sidebar-toggler" type="button" class="btn btn-link p-0">
+				<BootstrapIcon id="iconToggle" name="arrow-left-circle-fill" class="text-secondary" />
+			</button>
+
 			<div class="dropdown">
 				<form class="form-inline me-4 d-none d-md-flex">
 					<div class="input-group input-group-inline shadow-none">
@@ -106,3 +108,17 @@
 		</div>
 	</nav>
 </template>
+
+<script setup lang="ts">
+	onMounted(() => {
+		const sidebarToggler: HTMLElement | null = document.querySelector("#sidebar-toggler");
+		const sidebar: HTMLElement | null = document.querySelector("#sidebar");
+		const iconToggle: HTMLElement | null = document.querySelector("#iconToggle");
+
+		sidebarToggler?.addEventListener("click", () => {
+			sidebar?.classList.toggle("d-none");
+			sidebarToggler?.children[0]?.classList.toggle('bi-arrow-left-circle-fill');
+			sidebarToggler?.children[0]?.classList.toggle('bi-arrow-right-circle-fill');
+		});
+	});
+</script>

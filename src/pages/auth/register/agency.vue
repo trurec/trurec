@@ -39,7 +39,7 @@
 
     <div class="mb-5">
       <label class="form-label" for="phone-number">Phone Number</label>
-      <vue-tel-input id="phone-number" class="form-control" v-model="phone" mode="national" defaultCountry="in" :autoFormat="true" v-on:validate="handlePhoneNumberInput"></vue-tel-input>
+      <vue-tel-input id="phone-number" class="form-control border p-2" v-model="phone" mode="national" defaultCountry="in" :autoFormat="true" v-on:validate="handlePhoneNumberInput"></vue-tel-input>
     </div>
 
     <div class="mb-5">

@@ -8,7 +8,7 @@
 					</div>
 				</div>
 
-				<ul class="nav nav-tabs mt-4 overflow-x border-0">
+				<ul class="nav nav-tabs overflow-x border-0">
 					<template v-for="(child, index) in children" :key="index">
 						<li class="nav-item ">
 							<NuxtLink :to="child.link" class="nav-link" exact exact-active-class="active">
