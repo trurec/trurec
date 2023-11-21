@@ -38,10 +38,8 @@
     </div>
 
     <div class="mb-5">
-      <label class="form-label" for="agency-name">
-        Phone Number
-      </label>
-      <input class="form-control" id="agency-name" type="text" name="agency-name">
+      <label class="form-label" for="phone-number">Phone Number</label>
+      <vue-tel-input id="phone-number" class="form-control" v-model="phone" mode="national" defaultCountry="in" :autoFormat="true" v-on:validate="handlePhoneNumberInput"></vue-tel-input>
     </div>
 
     <div class="mb-5">
@@ -96,9 +94,14 @@
 
 <script setup lang="ts">
 const emit = defineEmits(["navigateComponent"])
+const phone = ref(null);
 
 const navigateComponent = () => {
   emit("navigateComponent")
+};
+
+const handlePhoneNumberInput = (value: string) => {
+  console.log(value);
 };
 </script>
 

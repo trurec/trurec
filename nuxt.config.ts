@@ -43,7 +43,7 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   css: ["@/assets/sass/index.scss"],
-  modules: ["@nuxtjs/google-fonts", "nuxt-bootstrap-icons"],
+  modules: ["@nuxtjs/google-fonts", "nuxt-bootstrap-icons", "nuxt-purgecss"],
   googleFonts: {
     families: {
       Poppins: [300, 400, 500, 600, 700],

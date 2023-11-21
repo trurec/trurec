@@ -1,7 +1,9 @@
 <template>
-	<nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-2"
-		id="topbar">
+	<nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-2" id="topbar">
 		<div class="container-fluid">
+			<!-- <button type="button" class="btn btn-primary btn-sm">
+				<BootstrapIcon name="arrow-left-circle-fill" />
+			</button> -->
 			<div class="dropdown">
 				<form class="form-inline me-4 d-none d-md-flex">
 					<div class="input-group input-group-inline shadow-none">

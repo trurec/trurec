@@ -21,6 +21,7 @@
     "autoprefixer": "^10.4.16",
     "nuxt": "^3.8.0",
     "nuxt-bootstrap-icons": "^1.0.3",
+    "nuxt-purgecss": "^2.0.0",
     "postcss-loader": "^7.3.3",
     "sass": "^1.69.4",
     "sass-loader": "^13.3.2",
@@ -29,6 +30,7 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
-    "bootstrap": "^5.3.2"
+    "bootstrap": "^5.3.2",
+    "vue-tel-input": "^8.1.4"
   }
 }

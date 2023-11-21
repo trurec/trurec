@@ -361,7 +361,7 @@ $card-border-radius:                $border-radius-xl !default;
 $card-inner-border-radius:          subtract($card-border-radius, $card-border-width) !default;
 $card-box-shadow:                   null !default;
 
-$card-cap-padding-y:                0.25rem !default;
+$card-cap-padding-y:                1.25rem !default;
 $card-cap-padding-x:                $card-spacer-x !default;
 $card-cap-color:                    $headings-color !default;
 $card-cap-bg:                       rgba($black, 0) !default;
@@ -554,7 +554,7 @@ $nav-tabs-border-radius:            0 !default;
 $nav-tabs-link-hover-border-color:  transparent transparent transparent !default;
 $nav-tabs-link-active-color:        $primary !default;
 $nav-tabs-link-active-bg:           transparent !default;
-$nav-tabs-link-active-border-width: 2px !default;
+$nav-tabs-link-active-border-width: 1px !default;
 $nav-tabs-link-active-border-color: transparent transparent $primary !default;
 
 $nav-pills-border-radius:           $border-radius !default;

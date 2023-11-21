@@ -69,7 +69,7 @@
 
 				<ul class="navbar-nav accordion" id="sidebarMainMenu">
 					<template v-for="(menu, i) in MainMenuConfig" :key="i">
-						<li class="nav-item">
+						<li class="nav-item px-2 rounded">
 							<NuxtLink :to="menu?.route" class="nav-link collapsed" active-class="active" :id="`menu-${i}`"
 								data-bs-toggle="collapse" :data-bs-target="`#main-menu-${i}`"
 								:aria-expanded="activeSubmenu(menu?.route)" :aria-controls="`main-menu-${i}`">
@@ -80,8 +80,7 @@
 								<ul class="nav nav-sm flex-column">
 									<template v-for="(submenu, j) in menu?.submenus" :key="j">
 										<li class="nav-item">
-											<NuxtLink :to="submenu?.route" class="nav-link"
-												active-class="text-primary font-bold">{{ submenu?.title }}</NuxtLink>
+											<NuxtLink :to="submenu?.route" class="nav-link" active-class="font-bold">{{ submenu?.title }}</NuxtLink>
 										</li>
 									</template>
 								</ul>

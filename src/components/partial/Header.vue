@@ -1,7 +1,7 @@
 <template>
-	<header class="bg-surface-primary pt-2">
+	<header class="bg-surface-secondary">
 		<div class="container-fluid">
-			<div class="mb-npx">
+			<div class="mb-npx pt-6">
 				<div class="d-flex align-items-center">
 					<div class="mb-2 mb-sm-0">
 						<h1 class="h2 mb-0 ls-tight">{{ route?.meta?.module }}</h1>
