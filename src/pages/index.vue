@@ -37,7 +37,7 @@
                         </div>
                         <!-- Action -->
                         <div class="d-flex align-items-lg-center mt-3 mt-lg-0">
-                            <NuxtLink to="/auth/register" class="btn btn-sm btn-light w-full w-lg-auto">
+                            <NuxtLink to="/auth/register" class="btn btn-sm btn-white text-primary-hover w-full w-lg-auto">
                                 Register
                             </NuxtLink>
                         </div>
