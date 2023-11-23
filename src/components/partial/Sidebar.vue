@@ -51,8 +51,7 @@
 						<button
 							class="btn btn-primary d-flex w-full py-3 ps-3 pe-4 align-items-center shadow shadow-3-hover rounded-3"
 							type="button" data-bs-toggle="dropdown" aria-expanded="false">
-							<span class="flex-fill text-start text-sm text-center text-uppercase font-semibold">Add
-								New</span>
+							<span class="flex-fill text-start text-sm text-center text-uppercase font-semibold">{{ $t('addNew') }}</span>
 							<BootstrapIcon name="arrow-down-circle" class="text-light text-opacity-70" />
 						</button>
 						<div class="dropdown-menu dropdown-menu-end w-full mt-3">
@@ -129,7 +128,7 @@
 					<div class="d-flex gap-3 justify-content-center align-items-center mt-6">
 						<div>
 							<BootstrapIcon name="moon-stars" class="text-warning me-2" />
-							<span class="text-heading text-sm font-bold">Dark mode</span>
+							<span class="text-heading text-sm font-bold">{{ $t('darkMode') }}</span>
 						</div>
 						<div class="ms-auto">
 							<div class="form-check form-switch me-n2">

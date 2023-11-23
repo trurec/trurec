@@ -2,7 +2,7 @@
 	<header class="bg-surface-secondary">
 		<div class="container-fluid">
 			<div class="mb-npx pt-6">
-				<div class="d-flex align-items-center">
+				<div class="d-flex align-items-center mb-2">
 					<div class="mb-2 mb-sm-0">
 						<h1 class="h2 mb-0 ls-tight">{{ route?.meta?.module }}</h1>
 					</div>

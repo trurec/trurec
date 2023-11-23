@@ -43,7 +43,12 @@ export default defineNuxtConfig({
     pageTransition: { name: "page", mode: "out-in" },
   },
   css: ["@/assets/sass/index.scss"],
-  modules: ["@nuxtjs/google-fonts", "nuxt-bootstrap-icons", "nuxt-purgecss"],
+  modules: ["@nuxtjs/i18n", "@nuxtjs/google-fonts", "nuxt-bootstrap-icons", "nuxt-purgecss"],
+  i18n: {
+    locales: ['en', 'hi'],
+    defaultLocale: 'en',
+    vueI18n: "./i18n.config.ts" 
+  },
   googleFonts: {
     families: {
       Poppins: [300, 400, 500, 600, 700],

@@ -13,9 +13,7 @@
 							<span class="input-group-text border-0 shadow-none ps-0 pe-3">
 								<BootstrapIcon name="search" />
 							</span>
-							<input type="text" class="form-control form-control-flush" placeholder="Search..."
-								aria-label="Search" id="dropdown-search" data-bs-toggle="dropdown" aria-expanded="false"
-								data-bs-auto-close="outside" />
+							<input type="text" class="form-control form-control-flush" :placeholder="`${$t('search')}...`" aria-label="Search" id="dropdown-search" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" />
 							<div class="dropdown-menu dropdown-menu-start px-2" aria-labelledby="dropdown-search">
 								<div class="dropdown-item d-flex align-items-center">
 									<h6 class="dropdown-header p-0 m-0 font-semibold">Recently Searched</h6>
@@ -49,16 +47,16 @@
 			
 			<div class="navbar-top d-none d-sm-block">
 				<div class="hstack gap-3 ms-4">
-					<!-- <div class="dropdown">
-						<a href="#" class="px-2 text-base text-primary-hover text-opacity-70 text-opacity-100-hover" role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
-							EN
+					<div class="dropdown">
+						<a href="#" class="text-primary-hover text-opacity-100-hover text-uppercase font-semibold px-2" role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+							{{ locale }}
 						</a>
 						<div class="dropdown-menu dropdown-menu-end">
-							<a v-for="(value, key) in 3" :key="key" class="dropdown-item" href="#">
+							<a v-for="(value, key) in locales" :key="key" class="dropdown-item text-uppercase" href="#" @click.prevent="setLocale(value)">
 								{{ value }}
 							</a>
 						</div>
-					</div> -->
+					</div>
 					<div class="dropdown">
 						<a href="#" class="px-2 text-base text-primary-hover text-opacity-70 text-opacity-100-hover"
 							role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
@@ -113,6 +111,13 @@
 </template>
 
 <script setup lang="ts">
+    const { locale, locales } = useI18n();
+
+    const setLocale = (locale: string) => {
+    	const nuxtApp = useNuxtApp();
+    	nuxtApp.$i18n.locale.value = locale;
+    }
+
 	onMounted(() => {
 		const sidebarToggler: HTMLElement | null = document.querySelector("#sidebar-toggler");
 		const sidebar: HTMLElement | null = document.querySelector("#sidebar");
@@ -120,8 +125,10 @@
 
 		sidebarToggler?.addEventListener("click", () => {
 			sidebar?.classList.toggle("d-none");
-			sidebarToggler?.children[0]?.classList.toggle('bi-arrow-left-circle-fill');
-			sidebarToggler?.children[0]?.classList.toggle('bi-arrow-right-circle-fill');
+			Array.from(sidebarToggler?.children).forEach((child: Element) => {
+	          child.classList.toggle('bi-arrow-left-circle-fill');
+	          child.classList.toggle('bi-arrow-right-circle-fill');
+	        });
 		});
 	});
 </script>

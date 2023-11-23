@@ -7,7 +7,7 @@
 					<div class="card-body">
 						<div class="row">
 							<div class="col">
-								<span class="h6 font-semibold text-muted text-sm d-block mb-2">Job Openings</span>
+								<span class="h6 font-semibold text-muted text-sm d-block mb-2">{{ $t('jobOpenings') }}</span>
 								<span class="h3 font-bold mb-0">10</span>
 							</div>
 							<div class="col-auto">
@@ -20,7 +20,7 @@
 							<span class="badge badge-pill bg-opacity-30 bg-success text-success me-2">
 								<BootstrapIcon name="arrow-up" class="me-1" />13%
 							</span>
-							<span class="text-nowrap text-xs text-muted">Since last month</span>
+							<span class="text-nowrap text-xs text-muted">{{ $t('sinceLastMonth') }}</span>
 						</div>
 					</div>
 				</div>
@@ -30,8 +30,7 @@
 					<div class="card-body">
 						<div class="row">
 							<div class="col">
-								<span class="h6 font-semibold text-muted text-sm d-block mb-2">Total
-									Candidates</span>
+								<span class="h6 font-semibold text-muted text-sm d-block mb-2">{{ $t('totalCandidates') }}</span>
 								<span class="h3 font-bold mb-0">10</span>
 							</div>
 							<div class="col-auto">
@@ -44,7 +43,7 @@
 							<span class="badge badge-pill bg-opacity-30 bg-danger text-danger me-2">
 								<BootstrapIcon name="arrow-down" class="me-1" />-5%
 							</span>
-							<span class="text-nowrap text-xs text-muted">Since last month</span>
+							<span class="text-nowrap text-xs text-muted">{{ $t('sinceLastMonth') }}</span>
 						</div>
 					</div>
 				</div>
@@ -54,7 +53,7 @@
 					<div class="card-body">
 						<div class="row">
 							<div class="col">
-								<span class="h6 font-semibold text-muted text-sm d-block mb-2">Resumes Received</span>
+								<span class="h6 font-semibold text-muted text-sm d-block mb-2">{{ $t('resumesReceived') }}</span>
 								<span class="h3 font-bold mb-0">5</span>
 							</div>
 							<div class="col-auto">
@@ -67,7 +66,7 @@
 							<span class="badge badge-pill bg-opacity-30 bg-success text-success me-2">
 								<BootstrapIcon name="arrow-up" class="me-1" />30%
 							</span>
-							<span class="text-nowrap text-xs text-muted">Since last month</span>
+							<span class="text-nowrap text-xs text-muted">{{ $t('sinceLastMonth') }}</span>
 						</div>
 					</div>
 				</div>
