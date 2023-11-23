@@ -65,25 +65,25 @@
 							<div class="d-flex align-items-center justify-content-end gap-2">
 								<div class="dropdown">
 									<button class="btn btn-sm btn-neutral flex-none d-flex align-items-center gap-2 py-1 px-2" data-bs-toggle="dropdown" aria-expanded="false">
-										<img src="../../img/flags/eu.svg" class="w-rem-5 h-rem-5 rounded-circle" alt="..." /> <span>EUR</span> <i class="bi bi-chevron-down text-xs me-1"></i>
+										<img src="https://clever.webpixels.io/img/flags/eu.svg" class="w-rem-5 h-rem-5 rounded-circle" alt="..." /> <span>EUR</span> <i class="bi bi-chevron-down text-xs me-1"></i>
 									</button>
 									<ul class="dropdown-menu dropdown-menu-end dropdown-menu-sm" style="">
 										<li>
-											<a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="../../img/flags/us.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>USD</span></a>
+											<a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="https://clever.webpixels.io/img/flags/us.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>USD</span></a>
 										</li>
 										<li>
 											<a class="dropdown-item d-flex align-items-center gap-2" href="#">
-												<img src="../../img/flags/eu.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>EUR</span> <span class="ms-auto text-success text-lg"><i class="bi bi-check"></i></span>
+												<img src="https://clever.webpixels.io/img/flags/eu.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>EUR</span> <span class="ms-auto text-success text-lg"><i class="bi bi-check"></i></span>
 											</a>
 										</li>
 										<li>
-											<a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="../../img/flags/gb.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>GBP</span></a>
+											<a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="https://clever.webpixels.io/img/flags/gb.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>GBP</span></a>
 										</li>
 										<li>
-											<a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="../../img/flags/au.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>AUD</span></a>
+											<a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="https://clever.webpixels.io/img/flags/au.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>AUD</span></a>
 										</li>
 										<li>
-											<a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="../../img/flags/ro.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>RON</span></a>
+											<a class="dropdown-item d-flex align-items-center gap-2" href="#"><img src="https://clever.webpixels.io/img/flags/ro.svg" class="w-rem-6 h-rem-6 rounded-circle" alt="..." /> <span>RON</span></a>
 										</li>
 									</ul>
 								</div>
