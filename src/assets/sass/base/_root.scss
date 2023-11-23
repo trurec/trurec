@@ -89,4 +89,10 @@
 
   --#{$prefix}highlight-bg: #{$mark-bg};
 
+  // scss-docs-start form-validation
+  --#{$prefix}form-valid-border-color: #{$green};
+  --#{$prefix}form-valid-color: #{$green};
+  --#{$prefix}form-invalid-border-color: #{$red};
+  --#{$prefix}form-invalid-color: #{$red};
+  // scss-docs-end form-validation
 }

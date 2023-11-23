@@ -4,6 +4,9 @@
     $state,
     $color,
     $icon,
+    $tooltip-color,
+    $tooltip-bg-color,
+    $border-color,
     $focus-box-shadow: 0 0 $input-btn-focus-blur $input-focus-width rgba($color, $input-btn-focus-color-opacity)
 ) {
 

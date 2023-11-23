@@ -53,7 +53,12 @@
       <label class="form-label" for="password">
         Password
       </label>
-      <input class="form-control" id="password" type="password" name="password">
+      <input class="form-control" id="password" type="password" name="password" v-model="password" @input="checkPasswordStrength">
+      <div class="password-meter mt-2">
+        <div class="progress">
+          <div class="progress-bar" role="progressbar" :class="progressClass" :style="{ width: progressWidth }" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{ passwordStrength }}</div>
+        </div>
+      </div>
     </div>
 
     <div class="mb-5">
@@ -93,6 +98,8 @@
 </template>
 
 <script setup lang="ts">
+const { password, passwordStrength, progressClass, progressWidth, checkPasswordStrength } = usePasswordStrength();
+
 const emit = defineEmits(["navigateComponent"])
 const phone = ref(null);
 
