@@ -1,6 +1,48 @@
 <template>
   <form method="POST" action="/">
+
+    <div class="row g-2 mb-5">
+      <div class="col-md">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="firstName" placeholder="Enter first name">
+          <label for="firstName">First name</label>
+        </div>
+      </div>
+      <div class="col-md">
+        <div class="form-floating">
+          <input type="text" class="form-control" id="lastName" placeholder="Enter last name">
+          <label for="lastName">Last name</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-floating mb-5">
+      <input type="email" class="form-control" id="floatingInput" placeholder="Enter email address" autocomplete="">
+      <label for="floatingInput">Email address</label>
+    </div>
+
     <div class="mb-5">
+      <vue-tel-input id="phone-number" class="form-control border p-3" v-model="phone" mode="national" defaultCountry="in"
+        :autoFormat="true" v-on:validate="handlePhoneNumberInput"></vue-tel-input>
+    </div>
+
+    <div class="form-floating mb-5">
+      <input type="password" class="form-control" id="password" v-model="password"
+        v-on:input.prevent="checkPasswordStrength" placeholder="Enter password" autocomplete="new-password">
+      <label for="password">Password</label>
+      <div class="progress mt-2">
+        <div class="progress-bar" role="progressbar" :class="progressClass" :style="{ width: progressWidth }"
+          aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{ passwordStrength }}</div>
+      </div>
+    </div>
+
+    <div class="form-floating mb-5">
+      <input type="password" class="form-control" id="confirm-password" placeholder="Enter confirm password"
+        autocomplete="new-password">
+      <label for="confirm-password">Confirm password</label>
+    </div>
+
+    <!-- <div class="mb-5">
       <label class="form-label" for="email">
         Full Name
       </label>
@@ -35,11 +77,12 @@
           </select>
         </div>
       </div>
-    </div>
+    </div> -->
 
-    <div class="mb-5">
+    <!-- <div class="mb-5">
       <label class="form-label" for="phone-number">Phone Number</label>
-      <vue-tel-input id="phone-number" class="form-control border p-2" v-model="phone" mode="national" defaultCountry="in" :autoFormat="true" v-on:validate="handlePhoneNumberInput"></vue-tel-input>
+      <vue-tel-input id="phone-number" class="form-control border p-2" v-model="phone" mode="national" defaultCountry="in"
+        :autoFormat="true" v-on:validate="handlePhoneNumberInput"></vue-tel-input>
     </div>
 
     <div class="mb-5">
@@ -47,26 +90,7 @@
         Company Website (Optional)
       </label>
       <input class="form-control" id="agency-name" type="text" name="agency-name">
-    </div>
-
-    <div class="mb-5">
-      <label class="form-label" for="password">
-        Password
-      </label>
-      <input class="form-control" id="password" type="password" name="password" v-model="password" @input="checkPasswordStrength">
-      <div class="password-meter mt-2">
-        <div class="progress">
-          <div class="progress-bar" role="progressbar" :class="progressClass" :style="{ width: progressWidth }" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">{{ passwordStrength }}</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="mb-5">
-      <label class="form-label" for="confirm-password">
-        Confirm Password
-      </label>
-      <input class="form-control" id="confirm-password" type="text" name="confirm-password">
-    </div>
+    </div> -->
 
     <div class="my-6">
       <div class="form-check mb-5">

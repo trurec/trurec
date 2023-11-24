@@ -1,8 +1,8 @@
 export default function usePasswordStrength() {
-  const password = ref('');
-  const passwordStrength = ref('');
-  const progressClass = ref('');
-  const progressWidth = ref('0%');
+  const password = ref("");
+  const passwordStrength = ref("");
+  const progressClass = ref("");
+  const progressWidth = ref("0%");
 
   const checkPasswordStrength = () => {
     const validators = [
@@ -13,15 +13,19 @@ export default function usePasswordStrength() {
       validateSpecialChars,
     ];
 
-    const strength = validators.reduce((acc, validator) => acc + validator(password.value), 0);
+    const strength = validators.reduce(
+      (acc, validator) => acc + validator(password.value),
+      0
+    );
     updatePasswordStrength(strength * 20);
   };
 
-  const validateLength = (value: string) => value.length >= 8 ? 1 : 0;
-  const validateLowerCase = (value: string) => value.match(/[a-z]/) ? 1 : 0;
-  const validateUpperCase = (value: string) => value.match(/[A-Z]/) ? 1 : 0;
-  const validateNumbers = (value: string) => value.match(/[0-9]/) ? 1 : 0;
-  const validateSpecialChars = (value: string) => value.match(/[!@#$%^&*()_+{}|:<>?]/) ? 1 : 0;
+  const validateLength = (value: string) => (value.length >= 8 ? 1 : 0);
+  const validateLowerCase = (value: string) => (value.match(/[a-z]/) ? 1 : 0);
+  const validateUpperCase = (value: string) => (value.match(/[A-Z]/) ? 1 : 0);
+  const validateNumbers = (value: string) => (value.match(/[0-9]/) ? 1 : 0);
+  const validateSpecialChars = (value: string) =>
+    value.match(/[!@#$%^&*()_+{}|:<>?]/) ? 1 : 0;
 
   const updatePasswordStrength = (strength: number) => {
     if (password.value.length === 0) {
@@ -32,7 +36,7 @@ export default function usePasswordStrength() {
     if (strength <= 40) {
       passwordStrength.value = "Weak";
       progressClass.value = "bg-danger";
-    } else if (strength <= 70) {
+    } else if (strength <= 80) {
       passwordStrength.value = "Medium";
       progressClass.value = "bg-warning";
     } else {
@@ -44,9 +48,9 @@ export default function usePasswordStrength() {
   };
 
   const resetPasswordStrength = () => {
-    passwordStrength.value = '';
-    progressClass.value = '';
-    progressWidth.value = '0%';
+    passwordStrength.value = "";
+    progressClass.value = "";
+    progressWidth.value = "0%";
   };
 
   return {
