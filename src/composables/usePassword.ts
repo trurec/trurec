@@ -1,4 +1,4 @@
-export default function usePasswordStrength() {
+export default function usePassword() {
   const password = ref("");
   const passwordStrength = ref("");
   const progressClass = ref("");
@@ -13,10 +13,7 @@ export default function usePasswordStrength() {
       validateSpecialChars,
     ];
 
-    const strength = validators.reduce(
-      (acc, validator) => acc + validator(password.value),
-      0
-    );
+    const strength = validators.reduce((acc, validator) => acc + validator(password.value), 0);
     updatePasswordStrength(strength * 20);
   };
 
@@ -24,8 +21,7 @@ export default function usePasswordStrength() {
   const validateLowerCase = (value: string) => (value.match(/[a-z]/) ? 1 : 0);
   const validateUpperCase = (value: string) => (value.match(/[A-Z]/) ? 1 : 0);
   const validateNumbers = (value: string) => (value.match(/[0-9]/) ? 1 : 0);
-  const validateSpecialChars = (value: string) =>
-    value.match(/[!@#$%^&*()_+{}|:<>?]/) ? 1 : 0;
+  const validateSpecialChars = (value: string) => (value.match(/[!@#$%^&*()_+{}|:<>?]/) ? 1 : 0);
 
   const updatePasswordStrength = (strength: number) => {
     if (password.value.length === 0) {
@@ -53,11 +49,30 @@ export default function usePasswordStrength() {
     progressWidth.value = "0%";
   };
 
+  const togglePasswordVisibility = () => {
+    const passwordField = document.getElementById("password");
+    const passwordEyeIcon = document.getElementById("password-eye-icon");
+
+    if (passwordField) {
+      if (passwordField.type === "password") {
+        passwordField.type = "text";
+      } else if (passwordField.type === "text") {
+        passwordField.type = "password";
+      }
+    }
+
+    if (passwordEyeIcon) {
+      passwordEyeIcon.classList.toggle('bi-eye');
+      passwordEyeIcon.classList.toggle('bi-eye-slash');
+    }
+  }
+
   return {
     password,
     passwordStrength,
     progressClass,
     progressWidth,
     checkPasswordStrength,
+    togglePasswordVisibility
   };
 }

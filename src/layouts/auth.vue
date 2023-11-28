@@ -18,7 +18,7 @@
                     </div>
 
                     <div class="mt-auto ps-16 ps-xl-20">
-                        <img src="https://satoshi.webpixels.io/img/marketing/shot-1.png" class="img-fluid rounded-top-start-4" alt="...">
+                        <img src="https://webpixels.s3.eu-central-1.amazonaws.com/img/products/6Efg0e4x7Eg6o6GigrqCpHmZeaCOkR4Ls8XIequz.jpg" class="img-fluid rounded-top-start-4" alt="...">
                     </div>
                 </div>
             </div>
