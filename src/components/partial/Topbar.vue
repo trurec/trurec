@@ -1,5 +1,6 @@
 <template>
-	<nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-2" id="topbar">
+	<nav class="navbar navbar-light position-lg-sticky top-lg-0 d-none d-lg-block overlap-10 flex-none bg-white border-bottom px-0 py-2"
+		id="topbar">
 		<div class="container-fluid">
 
 			<div class="d-flex align-items-center">
@@ -13,19 +14,21 @@
 							<span class="input-group-text border-0 shadow-none ps-0 pe-3">
 								<BootstrapIcon name="search" />
 							</span>
-							<input type="text" class="form-control form-control-flush" :placeholder="`${$t('search')}...`" aria-label="Search" id="dropdown-search" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" />
+							<input type="text" class="form-control form-control-flush" :placeholder="`${$t('search')}...`"
+								aria-label="Search" id="dropdown-search" data-bs-toggle="dropdown" aria-expanded="false"
+								data-bs-auto-close="outside" />
 							<div class="dropdown-menu dropdown-menu-start px-2" aria-labelledby="dropdown-search">
-								<div class="dropdown-item d-flex align-items-center">
+								<div class="dropdown-item d-flex align-items-center justify-content-between">
 									<h6 class="dropdown-header p-0 m-0 font-semibold">Recently Searched</h6>
-									<a href="#search-preferences" class="text-sm font-semibold ms-auto"
-										data-bs-toggle="collapse" role="button" aria-expanded="false"
-										aria-controls="search-preferences">
-										<BootstrapIcon name="gear" />
-									</a>
-								</div>
-								<div class="collapse" id="search-preferences">
-									<div class="dropdown-item d-flex">
-										<div class="flex-fill py-3">
+									<div class="dropdown">
+										<button class="btn btn-link text-sm font-semibold ms-auto pe-0" type="button"
+											id="search-preferences" data-bs-toggle="dropdown">
+											<BootstrapIcon name="gear" />
+										</button>
+										<div class="dropdown-menu" aria-labelledby="search-preferences">
+											<a class="dropdown-item" href="#">Nested Item 1</a>
+											<a class="dropdown-item" href="#">Nested Item 2</a>
+											<a class="dropdown-item" href="#">Nested Item 3</a>
 										</div>
 									</div>
 								</div>
@@ -44,15 +47,17 @@
 					</form>
 				</div>
 			</div>
-			
+
 			<div class="navbar-top d-none d-sm-block">
 				<div class="hstack gap-3 ms-4">
 					<div class="dropdown">
-						<a href="#" class="text-primary-hover text-opacity-100-hover text-uppercase font-semibold px-2" role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
+						<a href="#" class="text-primary-hover text-opacity-100-hover text-uppercase font-semibold px-2"
+							role="button" data-bs-toggle="dropdown" aria-haspopup="false" aria-expanded="false">
 							{{ locale }}
 						</a>
 						<div class="dropdown-menu dropdown-menu-end">
-							<a v-for="(value, key) in locales" :key="key" class="dropdown-item text-uppercase" href="#" @click.prevent="setLocale(value)">
+							<a v-for="(value, key) in locales" :key="key" class="dropdown-item text-uppercase" href="#"
+								@click.prevent="setLocale(value)">
 								{{ value }}
 							</a>
 						</div>
@@ -111,24 +116,25 @@
 </template>
 
 <script setup lang="ts">
-    const { locale, locales } = useI18n();
+const { locale, locales } = useI18n();
 
-    const setLocale = (locale: string) => {
-    	const nuxtApp = useNuxtApp();
-    	nuxtApp.$i18n.locale.value = locale;
-    }
+const setLocale = (locale: string) => {
+	const nuxtApp = useNuxtApp();
+	nuxtApp.$i18n.locale.value = locale;
+	localStorage.setItem("trurec.locale", locale);
+}
 
-	onMounted(() => {
-		const sidebarToggler: HTMLElement | null = document.querySelector("#sidebar-toggler");
-		const sidebar: HTMLElement | null = document.querySelector("#sidebar");
-		const iconToggle: HTMLElement | null = document.querySelector("#iconToggle");
+onMounted(() => {
+	const sidebarToggler: HTMLElement | null = document.querySelector("#sidebar-toggler");
+	const sidebar: HTMLElement | null = document.querySelector("#sidebar");
+	const iconToggle: HTMLElement | null = document.querySelector("#iconToggle");
 
-		sidebarToggler?.addEventListener("click", () => {
-			sidebar?.classList.toggle("d-none");
-			Array.from(sidebarToggler?.children).forEach((child: Element) => {
-	          child.classList.toggle('bi-arrow-left-circle-fill');
-	          child.classList.toggle('bi-arrow-right-circle-fill');
-	        });
+	sidebarToggler?.addEventListener("click", () => {
+		sidebar?.classList.toggle("d-none");
+		Array.from(sidebarToggler?.children).forEach((child: Element) => {
+			child.classList.toggle('bi-arrow-left-circle-fill');
+			child.classList.toggle('bi-arrow-right-circle-fill');
 		});
 	});
+});
 </script>
