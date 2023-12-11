@@ -65,6 +65,12 @@
             margin-top: 2px;
         }
 
+        .nav-xs {
+            .nav-link {
+                font-size: $font-size-xs;
+            }
+        }
+
         .nav-sm {
             .nav-link {
                 font-size: $font-size-sm;

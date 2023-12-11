@@ -4,7 +4,7 @@
 		<div class="container-fluid">
 
 			<div class="d-flex align-items-center">
-				<button id="sidebar-toggler" type="button" class="btn btn-link p-0">
+				<button id="sidebar-toggler" ref="sidebarToggler" type="button" class="btn btn-link p-0">
 					<BootstrapIcon id="iconToggle" name="arrow-left-circle-fill" class="text-secondary" />
 				</button>
 
@@ -20,7 +20,7 @@
 							<div class="dropdown-menu dropdown-menu-start px-2" aria-labelledby="dropdown-search">
 								<div class="dropdown-item d-flex align-items-center justify-content-between">
 									<h6 class="dropdown-header p-0 m-0 font-semibold">Recently Searched</h6>
-									<div class="dropdown">
+									<div class="dropdown" data-bs-theme="dark">
 										<button class="btn btn-link text-sm font-semibold ms-auto pe-0" type="button"
 											id="search-preferences" data-bs-toggle="dropdown">
 											<BootstrapIcon name="gear" />
@@ -117,6 +117,7 @@
 
 <script setup lang="ts">
 const { locale, locales } = useI18n();
+const { sidebarToggler } = useSidebarToggle();
 
 const setLocale = (locale: string) => {
 	const nuxtApp = useNuxtApp();
@@ -125,16 +126,16 @@ const setLocale = (locale: string) => {
 }
 
 onMounted(() => {
-	const sidebarToggler: HTMLElement | null = document.querySelector("#sidebar-toggler");
-	const sidebar: HTMLElement | null = document.querySelector("#sidebar");
-	const iconToggle: HTMLElement | null = document.querySelector("#iconToggle");
+	// const sidebarToggler: HTMLElement | null = document.querySelector("#sidebar-toggler");
+	// const sidebar: HTMLElement | null = document.querySelector("#sidebar");
+	// const iconToggle: HTMLElement | null = document.querySelector("#iconToggle");
 
-	sidebarToggler?.addEventListener("click", () => {
-		sidebar?.classList.toggle("d-none");
-		Array.from(sidebarToggler?.children).forEach((child: Element) => {
-			child.classList.toggle('bi-arrow-left-circle-fill');
-			child.classList.toggle('bi-arrow-right-circle-fill');
-		});
-	});
+	// sidebarToggler?.addEventListener("click", () => {
+	// 	sidebar?.classList.toggle("d-none");
+	// 	Array.from(sidebarToggler?.children).forEach((child: Element) => {
+	// 		child.classList.toggle('bi-arrow-left-circle-fill');
+	// 		child.classList.toggle('bi-arrow-right-circle-fill');
+	// 	});
+	// });
 });
 </script>

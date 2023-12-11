@@ -1,5 +1,5 @@
 <template>
-	<nav id="sidebar" class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg scrollbar">
+	<nav id="sidebar" ref="sidebar" class="navbar show navbar-vertical h-lg-screen navbar-expand-lg px-0 py-3 navbar-light bg-white border-bottom border-bottom-lg-0 border-end-lg scrollbar">
 		<div class="container-fluid">
 
 			<button class="navbar-toggler ms-n2" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarCollapse"
@@ -75,7 +75,7 @@
 							</NuxtLink>
 							<div class="collapse" :class="{ 'show': activeSubmenu(menu?.route) }" :id="`main-menu-${i}`"
 								:aria-labelledby="`menu-${i}`" data-bs-parent="#sidebarMainMenu">
-								<ul class="nav nav-sm flex-column">
+								<ul class="nav nav-xs flex-column">
 									<template v-for="(submenu, j) in menu?.submenus" :key="j">
 										<li class="nav-item">
 											<NuxtLink :to="submenu?.route" class="nav-link" active-class="font-bold">{{ submenu?.title }}</NuxtLink>
@@ -147,6 +147,7 @@
 import MainMenuConfig from "~/config/MainMenuConfig";
 
 const routeObject = reactive({ route: useRoute() });
+const { sidebar } = useSidebarToggle();
 
 const activeSubmenu = (input: string) => {
 	// Convert the input to an array if it's not already
