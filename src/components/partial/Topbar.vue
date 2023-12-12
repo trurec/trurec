@@ -20,7 +20,7 @@
 							<div class="dropdown-menu dropdown-menu-start px-2" aria-labelledby="dropdown-search">
 								<div class="dropdown-item d-flex align-items-center justify-content-between">
 									<h6 class="dropdown-header p-0 m-0 font-semibold">Recently Searched</h6>
-									<div class="dropdown" data-bs-theme="dark">
+									<div class="dropdown">
 										<button class="btn btn-link text-sm font-semibold ms-auto pe-0" type="button"
 											id="search-preferences" data-bs-toggle="dropdown">
 											<BootstrapIcon name="gear" />
